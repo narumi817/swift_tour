@@ -86,6 +86,7 @@ for score in individualScores {
 print(teamScore)
 
 // optional value : nilが入りうる値
+// https://qiita.com/maiki055/items/b24378a3707bd35a31a8
 // ? を型の後に記述すると定義できる
 var optionalString: String? = "Hello"
 print(optionalString == nil)
@@ -391,7 +392,7 @@ print(triangleAndSquare.triangle.sideLength)
 triangleAndSquare.square = Square(sideLength: 50, name: "lager square")
 print(triangleAndSquare.triangle.sideLength)
 
-// オプショナル値でプロパティ値にアクセスしたい時は変数の後ろに ? をつける => nilの場合はnilが返ってくる
+// オプショナル型でプロパティ値にアクセスしたい時は変数の後ろに ? をつける => nilの場合はnilが返ってくる
 let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
 let sideLength = optionalSquare?.sideLength
 
@@ -583,7 +584,7 @@ do {
     print(error)
 }
 
-// try? を使用すると結果がオプション値に変換される
+// try? を使用すると結果がオプショナル型に変換される
 // エラーをスローされた場合、値は nil になる
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
 let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
